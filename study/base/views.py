@@ -9,3 +9,6 @@ def home(request):
 
 def room(request):
     return HttpResponse('ROOM')
+
+def hello(request):
+    return HttpResponse("Hello")
