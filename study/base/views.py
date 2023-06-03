@@ -12,3 +12,7 @@ def room(request):
 
 def hello(request):
     return HttpResponse("Hello")
+
+
+def snap(request):
+    return HttpResponse("Hello")
