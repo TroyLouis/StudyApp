@@ -3,16 +3,14 @@ from django.http import HttpResponse
 
 # Create your views here.
 
+rooms = [
+    {'id': 1, 'name': 'Lets learn python!'},
+    {'id': 2, 'name': 'Design with me'},
+    {'id': 3, 'name': 'Frontend'}
+         ]
 
 def home(request):
-    return HttpResponse('Hello Troy')
+    return render(request, 'home.html', {'rooms':rooms})
 
 def room(request):
-    return HttpResponse('ROOM')
-
-def hello(request):
-    return HttpResponse("Hello")
-
-
-def snap(request):
-    return HttpResponse("Hello")
+    return render(request, 'room.html')
